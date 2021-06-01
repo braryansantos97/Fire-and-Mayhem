@@ -1,3 +1,151 @@
-body {
-  background-color: gray;
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Squada+One&display=swap');
+
+#container1{
+  font-family: 'Pattaya', sans-serif;
+  visibility: visible;
+  font-size: 80px;
+  color: black;
+  border: solid;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url("https://www.fgbg.art/static/svc_chaos_powerGenerationRoom-ff23c32902ddbd0227b67dbec40f0f16.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+#container1 > h1{
+  color: black;
+  -webkit-text-stroke: 1px white;
+}
+/* #container1.close {
+  visibility: hidden;
+} */
+
+.btn, .btn2{
+  font-family: 'Squada One', cursive;
+  font-size: 200px
+  color: black;
+  -webkit-text-stroke: 0.5px white;
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* .btn2 {
+  display: block;
+} */
+
+#container1.close, #container2, #container2.close, #container3, #container3.close, #container4{
+  display: none;
+}
+#container2.open, #container3.open{
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 3px;
+  text-align: center;
+  display: inherit;
+  background-image: url("https://www.fgbg.art/static/svc_chaos_powerGenerationRoom-ff23c32902ddbd0227b67dbec40f0f16.gif");
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border: solid;
+  /* border-color: blue; */
+  object-fit: fill;
+  color: black;
+  font-size: 18px;
+  -webkit-text-stroke: 0.8px white;
+}
+.characterContainer {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 3px;
+  max-width: inherit;
+  max-height: inherit;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: solid;
+  /* border-color: red; */
+}
+.characterContainer div:nth-child(1){
+background-image: url("./images/AE.gif");
+}
+.characterContainer div:nth-child(2){
+background-image: url("./images/CD.gif");
+}
+.characterContainer div:nth-child(3){
+background-image: url("./images/SH.gif");
+}
+.characterContainer div:nth-child(4){
+background-image: url("./images/MC.gif");
+}
+.characterContainer div:nth-child(5){
+background-image: url("./images/IN.gif");
+}
+.characterContainer div:nth-child(6){
+background-image: url("./images/P.gif");
+}
+.characterContainer div:nth-child(7){
+  background-image: url("./images/NT.gif");
+  grid-column: 2/3;
+}
+.characterContainer div:nth-child(8){
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.characterContainer div:nth-child(9){
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+.characterContainer div:nth-child(10){
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+
+.character, .box{
+  /* width: inherit;
+  height: inherit; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: solid;
+}
+.arenas{
+  background-image: url("https://www.fgbg.art/static/kizunaEncounter_deadend_day-2f108f3eb94376bcf3eb8578678057e0.gif");
+}
+#container4.open {
+  font-family: 'Squada One', cursive;
+  font-size: 200px
+  color: black;
+  -webkit-text-stroke: 0.5px white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3px;
+  border: solid;
+}
+.element{
+  text-align: center;
+  object-fit: none;
+  /* border: solid; */
+  height: 280px;
+  width: 280px;
+
 }

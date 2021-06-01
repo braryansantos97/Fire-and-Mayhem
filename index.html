@@ -7,7 +7,174 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <img src="" loop=infinite />
+    <div class="menu" id="container1">
+      <h1>Fire and Mayhem</h1>
+      <button class="btn" type="button" id="p1vsp2"><strong>Player1 vs Player2</strong></button>
+      <br>
+      <button class="btn" type="button" id="p1vscpu"><strong>Player1 vs CPU</strong></button>
+    </div>
+
+    <div class="charactersSelectionP1VsP2" id="container2">
+      <h3>Choose a Character</h3>
+      <div class="characterContainer">
+        <div type="button" class="character box" id="character0">
+          <h4>Albert Einstein</h4>
+          <!-- <img id="AlbertEinstein" src="./images/AE.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character1">
+          <h4>Charles Darwin</h4>
+          <!-- <img id="CharlesDarwin" src="./images/CD.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character2">
+          <h4>Stephen Hawking</h4>
+          <!-- <img id="StephenHawking" src="./images/SH.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character3">
+          <h4>Marie Curie</h4>
+          <!-- <img id="MarieCurie" src="./images/MC.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character4">
+          <h4>Isaac Newton</h4>
+          <!-- <img id="IsaacNewton" src="./images/IN.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character5">
+          <h4>Pythagoras</h4>
+          <!-- <img id="Pythagoras" src="./images/P.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character6">
+          <h4>Nikola Tesla</h4>
+          <!-- <img id="NikolaTesla" src="./images/NT.gif" alt=""> -->
+        </div>
+        <div class="text" id="P1Instructions">
+          <h4>Player1 Instructions</h4>
+          <ul style="list-style-type:none;">
+            <li>Up = W</li>
+            <li>Right = D</li>
+            <li>Down = S</li>
+            <li>Left = A</li>
+            <li>Select = Spacebard</li>
+          </ul>
+        </div>
+        <div class="text" id="P2Instructions">
+          <h4>Player2 Instructions</h4>
+          <ul style="list-style-type:none;">
+            <li>Up = Up Arrow</li>
+            <li>Right = Right Arrow</li>
+            <li>Down = Down Arrow</li>
+            <li>Left = Left Arrow</li>
+            <li>Select = Return</li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <button class="btn2" id="previusArena">Previus Arena</button>
+          <button class="btn2" id="nextArena">Next Arena</button>
+          <button class="btn2" id="readyToFight"><strong>READY TO FIGHT</strong></button>
+        </div>
+        <div class="arenas box">
+        </div>
+      </div>
+    </div>
+
+    <div class="charactersSelectionP1VsCPU" id="container3">
+      <h3>Choose a Character</h3>
+      <div class="characterContainer">
+        <div class="character box" id="character0">
+          <h4>Albert Einstein</h4>
+          <!-- <img id="AlbertEinstein" src="./images/AE.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character1">
+          <h4>Charles Darwin</h4>
+          <!-- <img id="CharlesDarwin" src="./images/CD.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character2">
+          <h4>Stephen Hawking</h4>
+          <!-- <img id="StephenHawking" src="./images/SH.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character3">
+          <h4>Marie Curie</h4>
+          <!-- <img id="MarieCurie" src="./images/MC.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character4">
+          <h4>Isaac Newton</h4>
+          <!-- <img id="IsaacNewton" src="./images/IN.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character5">
+          <h4>Pythagoras</h4>
+          <!-- <img id="Pythagoras" src="./images/P.gif" alt=""> -->
+        </div>
+        <div class="character box" id="character6">
+          <h4>Nikola Tesla</h4>
+          <!-- <img id="NikolaTesla" src="./images/NT.gif" alt=""> -->
+        </div>
+        <div class="text" id="P1Instructions">
+          <h4>Player1 Instructions</h4>
+          <ul style="list-style-type:none;">
+            <li>Up = W</li>
+            <li>Right = D</li>
+            <li>Down = S</li>
+            <li>Left = A</li>
+            <li>Select = Spacebard</li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <button class="btn2" id="previusArena">Previus Arena</button>
+          <button class="btn2" id="nextArena">Next Arena</button>
+          <button class="btn2" id="readyToFight"><strong>READY TO FIGHT</strong></button>
+        </div>
+        <div class="arenas box">
+          <img/>
+        </div>
+      </div>
+    </div>
+
+    <div class="Fight" id="container4">
+      <div class="health element" id="P1Health">
+        <progress value="500" max="500"></progress>
+        <h2 id="player1Name"></h2>
+      </div>
+      <div class="element" id="timer">
+        <h1>00:00</h1>
+      </div>
+      <div class="health element" id="P2&CPUHealth">
+        <progress value="500" max="500"></progress>
+        <h2 id="player2Name"></h2>
+      </div>
+      <div class="element">
+        <img class="characterAtFight"  src="./images/AE.gif" id="Albert-Einstein" alt="">
+        <!-- <img class="characterAtFight" id="Charles-Darwin" src="./images/CD.gif" alt=""> -->
+        <!-- <img class="characterAtFight" id="Stephen-Hawking" src="./images/" alt=""> -->
+        <!-- <img class="characterAtFight" id="Marie-Curie" src="./images/MC.gif" alt=""> -->
+        <!-- <img class="characterAtFight" id="Isaac-Newton" src="./images/IN.gif" alt=""> -->
+        <!-- <img class="characterAtFight" id="Pythagoras" src="./images/" alt=""> -->
+        <!-- <img class="characterAtFight" id="Nikola-Tesla" src="./images/NT.gif" alt=""> -->
+      </div>
+      <div class="element">
+        <h1></h1>
+      </div>
+      <div class="element">
+        <!-- <img class="characterAtFight"  src="./images/AE.gif" id="Albert-Einstein" alt=""> -->
+        <img class="characterAtFight" id="Charles-Darwin" src="./images/CD.gif" alt="">
+        <!-- <img class="characterAtFight" id="Stephen-Hawking" src="./images/" alt=""> -->
+        <!-- <img class="characterAtFight" id="Marie-Curie" src="./images/MC.gif" alt=""> -->
+        <!-- <img class="characterAtFight" id="Isaac-Newton" src="./images/IN.gif" alt=""> -->
+        <!-- <img class="characterAtFight" id="Pythagoras" src="./images/" alt=""> -->
+        <!-- <img class="characterAtFight" id="Nikola-Tesla" src="./images/NT.gif" alt=""> -->
+      </div>
+      <div class="text element" id="P1Instructions">
+        <h4>Player1 Controls</h4>
+        <ul style="list-style-type:none;">
+          <li>Attack = Spacebard</li>
+        </ul>
+      </div>
+      <div class="text element" id="P2&CPUnstructions">
+        <h4>Player2 Controls</h4>
+        <ul style="list-style-type:none;">
+          <li>Attack = Return</li>
+        </ul>
+      </div>
+
+    </div>
+
     <script src="js/game.js"></script>
   </body>
 </html>
