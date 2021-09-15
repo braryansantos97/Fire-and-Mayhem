@@ -19,6 +19,8 @@ const timer = document.querySelector('#timer')
 const characters = document.querySelectorAll('#container2 > .characterContainer > .character');
 console.log(characters);
 const player1Name = document.querySelector('#container4 > .health > #player1Name')
+const player2Name = document.querySelector('#container4 > .health > #player2Name')
+
 const character0 = document.getElementById('character0');
 const character0Imgs = document.getElementById('Albert-Einstein');
 
@@ -81,27 +83,27 @@ class Fighter {
   attack(otherCharacter) {
     let characterAttack = this.weapons[Object.keys(this.weapons)[Math.floor(Math.random()*Object.keys(this.weapons).length)]];
       if(this.health <= 0 || otherCharacter.health <=0){
-        alert('Game over')
+        alert(`Game over`)
         restart()
       }
-    if (characterAttack == this.weapons.rapidAttack) {
+    if (characterAttack === this.weapons.rapidAttack) {
       this.domImgs.src = this.images.rapidAttackImg
       otherCharacter.health -= this.weapons.rapidAttack.damage;
       setTimeout( () => {
         this.domImgs.src = this.images.baseImage;
-      }, 500);
-      alert(`${this.name} hit ${otherCharacter.name}! with ${Object.keys(this.weapons.rapidAttack.name)} now ${otherCharacter.name} health is ${otherCharacter.health}`);
-    } else if (characterAttack == this.weapons.heavyAttack) {
+      }, 1500);
+      alert(`${this.name} hit ${otherCharacter.name}! with ${Object.keys(this.weapons)[0]} now ${otherCharacter.name} health is ${otherCharacter.health}`);
+    } else if (characterAttack === this.weapons.heavyAttack) {
       this.domImgs.src = this.images.heavyAttackImg
       otherCharacter.health -= this.weapons.heavyAttack.damage;
-      alert(`${this.name} hit ${otherCharacter.name}! with ${Object.keys(this.weapons.heavyAttack.name)/*[1]*/} now ${otherCharacter.name} health is ${otherCharacter.health}`);
+      alert(`${this.name} hit ${otherCharacter.name}! with ${Object.keys(this.weapons)[1]} now ${otherCharacter.name} health is ${otherCharacter.health}`);
       setTimeout( () => {
         this.domImgs.src = this.images.baseImage;
       }, 1100);
-    } else if(characterAttack == this.weapons.ultimateAttack){
+    } else if(characterAttack === this.weapons.ultimateAttack){
       this.domImgs.src = this.images.ultimateAttackImg
       otherCharacter.health -= this.weapons.ultimateAttack.damage;
-      alert(`${this.name} hit ${otherCharacter.name}! with ${Object.keys(this.weapons.ultimateAttack.name)/*[2]*/} now ${otherCharacter.name} health is ${otherCharacter.health}`);
+      alert(`${this.name} hit ${otherCharacter.name}! with ${Object.keys(this.weapons)[2]} now ${otherCharacter.name} health is ${otherCharacter.health}`);
       setTimeout( () => {
         this.domImgs.src = this.images.baseImage;
       }, 1000);
@@ -156,7 +158,6 @@ const game = {
     const player1 = this.fighters[0];
     console.log(player1)
     const player2 = this.fighters[1];
-    // player2.style.transform
 
     if (player1.health !==0 || player2.health !==0) {
       document.addEventListener('keydown', (e) => {
@@ -170,6 +171,7 @@ const game = {
       })
       console.log('Were are figthig');
     } else if (player1.health <= 0 || player2.health <=0) {
+      alert('The winer is ')
       restart()
     }
 }
@@ -206,33 +208,33 @@ const game = {
   // }
 // }
 
-const albertEinstein = new Fighter('Albert Einstein', 'normal hit', 'E=mc2', 'Relativity', 'images/AE.gif',
-'./images/AERA.gif', './images/Albert Einstein.gif',
-'./images/Albert Einstein2.gif', character0, character0Imgs)
+const albertEinstein = new Fighter('Albert Einstein', 'normal hit', 'E=mc2', 'Relativity', 'images/AE0.gif',
+'./images/AERA.gif', './images/AE2.gif',
+'./images/AE1.gif', character0, character0Imgs)
 game.fighters.push(albertEinstein)
 
-const charlesDarwin = new Fighter('Charles Darwin', 'normal hit', 'Natural Selection', 'Evolution', 'Images/CD.gif',
-'Images/CDRA.gif', 'Images/Charles Darwin2.gif', 'Images/Charles Darwin.gif', character1, character1Imgs)
+const charlesDarwin = new Fighter('Charles Darwin', 'normal hit', 'Natural Selection', 'Evolution', 'Images/CD0.gif',
+'Images/CDRA.gif', 'Images/CD3.gif', 'Images/CD1.gif', character1, character1Imgs)
 game.fighters.push(charlesDarwin)
 
-const stephenHawking = new Fighter('Stephen Hawking', 'normal hit', 'Wormhole', 'Black Hole', 'Images/SH.gif',
-'Images/SHRA.gif', 'Images/Stephen Hawking3gif.gif', 'Images/Stephen Hawking2.gif', character2, character2Imgs)
+const stephenHawking = new Fighter('Stephen Hawking', 'normal hit', 'Wormhole', 'Black Hole', 'Images/SH0.gif',
+'Images/SHRA.gif', 'Images/SH3.gif', 'Images/SH2.gif', character2, character2Imgs)
 game.fighters.push(stephenHawking)
 
-const marieCurie = new Fighter('Marie Curie', 'normal hit', 'Polonium', 'Radium', 'Images/MC.gif',
-'Images/MCRA.gif', 'Images/Marie Curie1.gif', 'Images/Marie Curie3.gif', character3, character3Imgs)
+const marieCurie = new Fighter('Marie Curie', 'normal hit', 'Polonium', 'Radium', 'Images/MC0.gif',
+'Images/MCRA.gif', 'Images/MC1.gif', 'Images/3.gif', character3, character3Imgs)
 game.fighters.push(marieCurie)
 
-const isaacNewton = new Fighter('Isaac Newton', 'normal hit', 'Optiks', 'Gravity', 'Images/IN.gif',
-'Images/INRA.gif', 'Images/Isaac Newton3.gif', 'Images/Isaac Newton1.gif', character4, character4Imgs)
+const isaacNewton = new Fighter('Isaac Newton', 'normal hit', 'Optiks', 'Gravity', 'Images/IN0.gif',
+'Images/INRA.gif', 'Images/IN3.gif', 'Images/IN1.gif', character4, character4Imgs)
 game.fighters.push(isaacNewton)
 
-const pythagoras = new Fighter('Pythagoras', 'normal hit', 'Tetractys', 'pythagorean theorem', 'Images/P.gif',
-'Images/PRA.gif', 'Images/Pythagoras1.gif', 'Images/Pythagoras2.gif', character5, character5Imgs)
+const pythagoras = new Fighter('Pythagoras', 'normal hit', 'Tetractys', 'pythagorean theorem', 'Images/P0.gif',
+'Images/PRA.gif', 'Images/P1.gif', 'Images/P2.gif', character5, character5Imgs)
 game.fighters.push(pythagoras)
 
-const nikolaTesla = new Fighter('Nikola Tesla', 'normal hit', 'Tesla Coil', 'Teleforce "death ray"', 'Images/NT.gif',
-'Images/NTRA.gif', 'Images/Nikola Tesla.gif', 'Images/Nikola Tesla2.gif', character6, character6Imgs)
+const nikolaTesla = new Fighter('Nikola Tesla', 'normal hit', 'Tesla Coil', 'Teleforce "death ray"', 'Images/NT0.gif',
+'Images/NTRA.gif', 'Images/NT4.gif', 'Images/NT1.gif', character6, character6Imgs)
 game.fighters.push(nikolaTesla)
 
 
@@ -285,7 +287,8 @@ const openContainer4 = () => {
   container4.style.backgroundImage = `url('${arenaBackgrounds[currentArena]}')`
 }
 
-player1Name.style.innerText = '${game.player1.name}'
+player1Name.innerText = game.fighters[0].name
+player2Name.innerText = game.fighters[1].name
 
 for (let i = 0; i < characters.length; i++){
   characters[i].addEventListener('click', (e) => {
@@ -305,6 +308,7 @@ const countDown = setInterval(()=> {
   displayTime(timeSeconds);
   if (timeSeconds <=0 || timeSeconds < 1) {
     clearInterval(countDown)
+    restart()
   }
 },1000)
 const displayTime = (second) => {

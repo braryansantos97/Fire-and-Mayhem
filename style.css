@@ -77,25 +77,25 @@
   /* border-color: red; */
 }
 .characterContainer div:nth-child(1){
-background-image: url("./images/AE.gif");
+background-image: url("./images/AE0.gif");
 }
 .characterContainer div:nth-child(2){
-background-image: url("./images/CD.gif");
+background-image: url("./images/CD0.gif");
 }
 .characterContainer div:nth-child(3){
-background-image: url("./images/SH.gif");
+background-image: url("./images/SH0.gif");
 }
 .characterContainer div:nth-child(4){
-background-image: url("./images/MC.gif");
+background-image: url("./images/MC0.gif");
 }
 .characterContainer div:nth-child(5){
-background-image: url("./images/IN.gif");
+background-image: url("./images/IN0.gif");
 }
 .characterContainer div:nth-child(6){
-background-image: url("./images/P.gif");
+background-image: url("./images/P0.gif");
 }
 .characterContainer div:nth-child(7){
-  background-image: url("./images/NT.gif");
+  background-image: url("./images/NT0.gif");
   grid-column: 2/3;
 }
 .characterContainer div:nth-child(8){
@@ -140,6 +140,10 @@ background-image: url("./images/P.gif");
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 3px;
   border: solid;
+}
+.Fight div:nth-child(8){
+  grid-row: 3/4;
+  grid-column: 3/4;
 }
 .element{
   text-align: center;
